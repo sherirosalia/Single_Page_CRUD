@@ -1,0 +1,343 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cupid Shuffle</title>
+  </head>
+
+  <div class="jumbotron sticky-top bg-dark text-white container">
+      <h1>Cupid shuffle</h1>  
+                
+      <p class="lead text-white">Can data science find true romance?</p> 
+      <p class="lead text-white"></p>              
+  </div>
+
+<!-- end of jumbotron and beginning of content container -->
+
+<!-- first wrapper container  -->
+<div class="container">  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1>Love and hip hop or country romance?</h1>
+
+          <p>
+            What strums your heart strings: country music or hip hop? 
+            Can we classify one as superior when it comes to matters of affection? This project
+            aims to see if analysis using machine learning algorithms will suggest that one genre
+            is more romantic in comparison with the other.
+          </p>
+
+          <p> My love of country music is in my blood. My mom's family is from the deep south specifically Mississippi
+            and I grew up listening 
+            to Hank Williams and Patsy Cline along with another child of the region, Elvis Presley. 
+            I've got a bias towards the belief that country music is more romantic than many other 
+            styles if
+            looking at lyrics alone and argue that as a genre, it is loaded with phrases evoking and
+            expressing a longing that does not show up as frequently in pop.    
+            So, in the pursuit of figuring out whether this is true or not, I did what any data professional would do 
+            and used the "super powers" of data science to see 
+            see what might turn up. 
+          </p>
+        </div>
+      <div class="col-md-2"></div>
+    </div>   
+    <!-- end of row       -->
+
+  </div>
+  <!-- end of text and rose container -->
+
+
+  <!-- beginning of container for spinning rose -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <figure>                
+                <img class="img-fluid figure-image mx-auto d-block" id='vinyl' src="images/rose.png" alt="vinyl">
+                <figcaption class="figure-caption">Let the music play on!</figcaption>
+            </figure>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+<!-- end of spinning rose image -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>The approach</h2>
+        <p>I retrieved two randomly generated sets of playlists from two categories namely: "country romance" and "hip hop romance"
+          using the Spotify API developer tools. This resulted in two lists which housed approximately 800 songs each. 
+          I took the song list extracted from Spotify and processed them using the API provided by genius.com
+          resulting in the lyric text for the combined 
+          total of 1600 tracks. The wording from all of these songs were subsequently normalized and cleaned with the 
+          Python programming language and processed using natural language machine learning algorithms. 
+          This process of extraction and tranformation provided the basis for evaluating each genre and finding distinct word patterns 
+          along with their use frequencies.          
+        </p> 
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h2>Country romance</h2>
+          <p>
+              I've been the only country music lover in a crowd of detractors more than once and when 
+              presenting my "case" for the gentle romance found within the lyrics I
+              point out that  
+              men sing the praises of women in an adoring context like this song from <a href="https://youtu.be/T-wNKv2PDxw">
+              Alan Jackson, "Big Green Eyes"</a>. Lo and behold, "eyes" make the list of most frequently 
+              used words in country romance lyrics as seen in the graph below.
+          </p> 
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  
+
+  <!-- beginning of container for country word count image -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <figure>
+                <img class="img-fluid figure-image mx-auto d-block" id='code' src="images/country_top_words.png" alt="spotify api">
+                <figcaption class="figure-caption">Top words in country romance</figcaption>
+            </figure>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<!-- end of country image -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>Love and hip hop</h2>
+        <p>
+            The detractors referenced above who would argue against me could point to the fact that 
+            the word "love"            
+            ranks at a higher frequency in hip hop compared to country as is seen in the chart below. 
+            Note that it
+            comes in at 2nd place in 
+            comparison with 4th in country. The counter argument could be that even though 
+            this may be true, the word "love" itself appears approximately 2,500 times
+            in the random sampling of country lyrics versus 1750 in hip hop.           
+        </p> 
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+
+  <!-- beginning of container for hip hop popular words image -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <figure>
+                <img class="img-fluid figure-image mx-auto d-block" id='code' src="images/hip_top.png" alt="hip hop top words">
+                <figcaption class="figure-caption">Hip hop top words</figcaption>
+            </figure>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<!-- end of hip hop popular words image -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>"Country Grammar" is a hip hop song</h2>
+        <p>
+            I took that song title to be an invitation to apply grammatical analysis, and the graphs 
+            below will take you down a tagmemic journey exploring language structures of the two musical 
+            styles which
+            seem to be remarkably similar to each other across all features even when accounting 
+            for the infusion foreign words
+            which can be seen in the non-English category. 
+        </p> 
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+  <!-- beginning of container for hip hop count image -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <figure>
+                <img class="img-fluid figure-image mx-auto d-block" id='code' src="images/country_word_types.png" alt="spotify api">
+                <figcaption class="figure-caption">Country word types</figcaption>
+            </figure>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<!-- end of country word type image -->
+
+  <!-- beginning of container for hip hop count image -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <figure>
+                <img class="img-fluid figure-image mx-auto d-block" id='code' src="images/hip_word_type.png" alt="spotify api">
+                <figcaption class="figure-caption">Hip Hop word types</figcaption>
+            </figure>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<!-- end of hip hop word type image -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>Analysis</h2>
+
+        <p>
+          Putting the fundamental flaws of the project aside, namely a relatively small amount of data in 
+          combination with the "elephant in the room" which is that language is rich and cannot be fully 
+          evaluated by examining words out of context,
+          evidence suggests that country is more romantic. For one thing, nouns dominate hip hop while country 
+          lyrics contain a more even handed variety of pronouns, adjectives and adverbs. This suggests 
+          the possibility of greater language complexity in country music
+          which can be a byproduct of expressing emotion. Additionally, phrases suggestive of
+          being polite and content
+          such as, "god", "mam'" and "home" made the country music list but 
+          expletives did not and the reverse is true for hip hop. 
+          
+        </p>  
+        <p>
+          The above being said, none of this is conclusive and can be easily counter argued. 
+          For example my assumption around the use of the word 'god' is anectdotal and 
+          stems from familiarity with 
+          the culture. For example, from an unbiased perspective, the frequent reference to a higher power could also suggest 
+          religious ferver or could easily come from the saying: "Oh my god".
+          Deeper inquiries may produce different conclusions and if I was to stay within the machine learning model 
+          for analysis, it           
+          would be helpful to get a larger data sample, and next steps could include 
+          sentiment analyis, evaluation of common phrases instead of individual words and also the inclusion of song release dates 
+          to see if language has changed over time.
+        </p>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+      
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>Cupid Shuffle</h2>
+        <p>
+            Much like the perks associated with being a restaurant reviewer having 
+            access to great food, 
+            this analysis required a fair amount of listening to good music and ultimately 
+            hip hop kept me tapping my foot while programming. 
+            In keeping with the spirit of the project, here's the "Cupid Shuffle" for your enjoyment.
+        </p> 
+      </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="embed-responsive embed-responsive-4by3">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h24_zoqu4_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/h24_zoqu4_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      </div>  
+      <div class="col-md-2"></div>
+    </div>
+  </div> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>The code</h2>
+        <p> If you are interested in the code, it is available here in my GitHub repository:  
+          <a href='https://github.com/sherirosalia/cupid_shuffle'>Code repository for cupid_shuffle</a>. Please 
+          feel free to fork or clone the project and to access the code for the Spotify
+          API is housed here: <a href="https://github.com/sherirosalia/sound_effects"> Code repository for sound_effects</a>.
+          The github page I created to support how to use the API is here: <a href="https://sherirosalia.github.io/sound_effects/" >sound_effects webpage</a>.
+        </p>  
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+            
+  </div>          
+ <!-- end of content div -->
+    <footer class="bg-dark text-white page-footer ">
+        <div class="text-center py-3">
+            <p class='text-white'>2020 Copyright  &copy;    Sheri Rosalia <a href="http://www.sherirosalia.com"><img src ="images/rose2.png"  style="margin-top: .25em; height: 2em; width:2em;" alt="rose logo"></a></p>
+        </div>  
+
+    </footer>    
+<!-- </div>  -->
+<!-- closing div for fluid container/wrapper -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    
+    <script>
+        $(function() {
+            var $elie = $("#vinyl"), degree = 0, timer;
+            rotate();
+            function rotate() {
+                
+                $elie.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});  
+                $elie.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});                      
+                timer = setTimeout(function() {
+                    ++degree; rotate();
+                },60);
+            }
+            
+            $("#vinyl").toggle(function() {
+                clearTimeout(timer);
+            }, function() {
+                rotate();
+            });
+
+            // rotate();
+        }); 
+    </script>
+
+  </body>
+</html>
+
+
