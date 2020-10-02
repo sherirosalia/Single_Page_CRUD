@@ -10,13 +10,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <title>Cupid Shuffle</title>
+    <title>Single page CRUD</title>
   </head>
 
   <div class="jumbotron sticky-top bg-dark text-white container">
-      <h1>Cupid shuffle</h1>  
+      <h1>Database management web application</h1>  
                 
-      <p class="lead text-white">Can data science find true romance?</p> 
+      <p class="lead text-white">Single page CRUD</p> 
       <p class="lead text-white"></p>              
   </div>
 
@@ -32,10 +32,18 @@
           <h1>Single page C.R.U.D. form with dynamically changing buttons</h1>
 
           <p>
-            What strums your heart strings: country music or hip hop? 
-            Can we classify one as superior when it comes to matters of affection? This project
-            aims to see if analysis using machine learning algorithms will suggest that one genre
-            is more romantic in comparison with the other.
+            Updating a SQL databases via a web interface has proven to be one of the most pragmatic 
+            inclusions to a website and this script can be customized and implemented under a wide 
+            variety of circumstances.
+ 
+          </p>
+          <p>
+
+            Due to the fact that it works by updating real databases, it seemed like the best way
+            to show how it works is by providing a video rather than providing access to a live site. 
+            Why risk an unscrupulous character
+            overwhelming the system by inputting large amounts of data? It is the world wide web after all!
+
           </p>
 
         </div>
@@ -52,11 +60,9 @@
         <div class="col-md-8">
           <h2>Video of how it works</h2>
           <p>
-              Much like the perks associated with being a restaurant reviewer having 
-              access to great food, 
-              this analysis required a fair amount of listening to good music and ultimately 
-              hip hop kept me tapping my foot while programming. 
-              In keeping with the spirit of the project, here's the "Cupid Shuffle" for your enjoyment.
+            The screencast shows a new entry and highlights it automatically updating in
+            the table view along with editing and finally the deletion process.
+             
           </p> 
         </div>
       <div class="col-md-2"></div>
@@ -79,15 +85,11 @@
   <div class="row">
     <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>The approach</h2>
-        <p>I retrieved two randomly generated sets of playlists from two categories namely: "country romance" and "hip hop romance"
-          using the Spotify API developer tools. This resulted in two lists which housed approximately 800 songs each. 
-          I took the song list extracted from Spotify and processed them using the API provided by genius.com
-          resulting in the lyric text for the combined 
-          total of 1600 tracks. The wording from all of these songs were subsequently normalized and cleaned with the 
-          Python programming language and processed using natural language machine learning algorithms. 
-          This process of extraction and tranformation provided the basis for evaluating each genre and finding distinct word patterns 
-          along with their use frequencies.          
+        <h2>Database entry</h2>
+        <p>  
+          Selecting the save button below the input form updates the table above without the need 
+          to refresh the page. 
+  
         </p> 
       </div>
       <div class="col-md-2"></div>
@@ -114,16 +116,14 @@
   <div class="row">
     <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>Edit the form</h2>
+        <h2>Edit the form data </h2>
         <p>
-            The detractors referenced above who would argue against me could point to the fact that 
-            the word "love"            
-            ranks at a higher frequency in hip hop compared to country as is seen in the chart below. 
-            Note that it
-            comes in at 2nd place in 
-            comparison with 4th in country. The counter argument could be that even though 
-            this may be true, the word "love" itself appears approximately 2,500 times
-            in the random sampling of country lyrics versus 1750 in hip hop.           
+           Upon pressing edit in the table, a combination of JavaScript and PHP programming languages script 
+           is activated to alter the save button
+           which converts to a teal color and the word "Save" changes to "Update". Upon completion of 
+           desired edits, the PHP programming language script communicates 
+           with the web server, updates it with a series of SQL query statements 
+           and returns the information to the table instantly.
         </p> 
       </div>
       <div class="col-md-2"></div>
@@ -138,7 +138,7 @@
         <div class="col-md-8">
             <figure>
                 <img class="img-fluid figure-image mx-auto d-block" id='code' src="images/edit_form_populates.png" alt="hip hop top words">
-                <figcaption class="figure-caption">Hip hop top words</figcaption>
+                <figcaption class="figure-caption">Edit existing data</figcaption>
             </figure>
 
         </div>
@@ -151,14 +151,11 @@
   <div class="row">
     <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>Update</h2>
+        <h2>Delete data</h2>
         <p>
-            I took that song title to be an invitation to apply grammatical analysis, and the graphs 
-            below will take you down a tagmemic journey exploring language structures of the two musical 
-            styles which
-            seem to be remarkably similar to each other across all features even when accounting 
-            for the infusion foreign words
-            which can be seen in the non-English category. 
+          Once again the database is updated using a combination of PHP and SQL after 
+          the user confirms deletion of the unecessary information. Note that the button 
+          has converted back to blue.     
         </p> 
       </div>
       <div class="col-md-2"></div>
@@ -166,19 +163,19 @@
   </div>
 
   <!-- beginning of container for hip hop count image -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <figure>
                 <img class="img-fluid figure-image mx-auto d-block" id='code' src="images/update_option.png" alt='show update button'>
-                <figcaption class="figure-caption">Update Option</figcaption>
+                <figcaption class="figure-caption">Update entry activated</figcaption>
             </figure>
 
         </div>
         <div class="col-md-2"></div>
     </div>
-</div>
+</div> -->
 <!-- end of country word type image -->
 
   <!-- beginning of container for hip hop count image -->
@@ -201,33 +198,19 @@
   <div class="row">
     <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>Analysis</h2>
+        <h2>Making database management friendly</h2>
 
         <p>
-          Putting the fundamental flaws of the project aside, namely a relatively small amount of data in 
-          combination with the "elephant in the room" which is that language is rich and cannot be fully 
-          evaluated by examining words out of context,
-          evidence suggests that country is more romantic. For one thing, nouns dominate hip hop while country 
-          lyrics contain a more even handed variety of pronouns, adjectives and adverbs. This suggests 
-          the possibility of greater language complexity in country music
-          which can be a byproduct of expressing emotion. Additionally, phrases suggestive of
-          being polite and content
-          such as, "god", "mam'" and "home" made the country music list but 
-          expletives did not and the reverse is true for hip hop. 
+         I built this project with with PHP, JavaScript and SQl. In order to 
+          streamline website management, 
+          limited it to one page.
+          It has provided the backbone of blog posts, streamlining medical care of eldery 
+          parents and in another use case, tracking sales. It is customizeable and is designed to 
+          integrate
+          into personal and commercial web hosting.
           
         </p>  
-        <p>
-          The above being said, none of this is conclusive and can be easily counter argued. 
-          For example my assumption around the use of the word 'god' is anectdotal and 
-          stems from familiarity with 
-          the culture. For example, from an unbiased perspective, the frequent reference to a higher power could also suggest 
-          religious ferver or could easily come from the saying: "Oh my god".
-          Deeper inquiries may produce different conclusions and if I was to stay within the machine learning model 
-          for analysis, it           
-          would be helpful to get a larger data sample, and next steps could include 
-          sentiment analyis, evaluation of common phrases instead of individual words and also the inclusion of song release dates 
-          to see if language has changed over time.
-        </p>
+    
       </div>
       <div class="col-md-2"></div>
     </div>
@@ -241,7 +224,7 @@
       <div class="col-md-8">
         <h2>The code</h2>
         <p> If you are interested in the code, it is available here in my GitHub repository:  
-          <a href='https://github.com/sherirosalia/Single_Page_CRUD'>Code repository for cupid_shuffle</a>. Please 
+          <a href='https://github.com/sherirosalia/Single_Page_CRUD'>Code repository for Single_Page_CRUD</a>. Please 
           feel free to fork or clone the project.
         </p>  
       </div>
